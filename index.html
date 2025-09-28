@@ -6,17 +6,29 @@ html, body {
   height: 100%;
   padding: 50px;
   line-height: 1.2;
+  box-sizing: border-box;
 }
 
 body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 footer {
-  margin-top: 150px;
+  margin-top: auto;
   font-size: small;
-  font
+}
+
+@media (max-width: 600px) {
+  html, body {
+    padding: 15px;
+  }
+  article {
+    max-width: 100%;
+  }
+  br { display: none; } /* remove forced line breaks on small screens */
+  body { font-size: 16px; } /* optional small-size tuning without changing desktop */
 }
 </style>
 <html>
@@ -47,8 +59,8 @@ footer {
         <a href="mailto:alexetc.greyhound650@slmails.com">here</a>.
       </p>
     </article>
-  </body>
   <footer>
     <i>Copyright 1982 Alex Barrett</i>
   </footer>
+  </body>
 </html>
